@@ -18,16 +18,20 @@ source = { virtual = "." }
 dependencies = [
     { name = "dj-database-url" },
     { name = "django" },
+    { name = "django-filter" },
     { name = "djangorestframework" },
     { name = "psycopg", extra = ["binary"] },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "dj-database-url", specifier = ">=2.3.0" },
     { name = "django", specifier = ">=5.2" },
+    { name = "django-filter", specifier = ">=25.1" },
     { name = "djangorestframework", specifier = ">=3.16.0" },
     { name = "psycopg", extras = ["binary"], specifier = ">=3.2.6" },
+    { name = "python-dotenv", specifier = ">=1.1.0" },
 ]
 
 [[package]]
@@ -55,6 +59,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/4c/1b/c6da718c65228eb3a7ff7ba6a32d8e80fa840ca9057490504e099e4dd1ef/Django-5.2.tar.gz", hash = "sha256:1a47f7a7a3d43ce64570d350e008d2949abe8c7e21737b351b6a1611277c6d89", size = 10824891 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/63/e0/6a5b5ea350c5bd63fe94b05e4c146c18facb51229d9dee42aa39f9fc2214/Django-5.2-py3-none-any.whl", hash = "sha256:91ceed4e3a6db5aedced65e3c8f963118ea9ba753fc620831c77074e620e7d83", size = 8301361 },
+]
+
+[[package]]
+name = "django-filter"
+version = "25.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b5/40/c702a6fe8cccac9bf426b55724ebdf57d10a132bae80a17691d0cf0b9bac/django_filter-25.1.tar.gz", hash = "sha256:1ec9eef48fa8da1c0ac9b411744b16c3f4c31176c867886e4c48da369c407153", size = 143021 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/07/a6/70dcd68537c434ba7cb9277d403c5c829caf04f35baf5eb9458be251e382/django_filter-25.1-py3-none-any.whl", hash = "sha256:4fa48677cf5857b9b1347fed23e355ea792464e0fe07244d1fdfb8a806215b80", size = 94114 },
 ]
 
 [[package]]
@@ -125,6 +141,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/d7/d7/0d2cb4b42f231e2efe8ea1799ce917973d47486212a2c4d33cd331e7ac28/psycopg_binary-3.2.6-cp313-cp313-musllinux_1_2_ppc64le.whl", hash = "sha256:36f598300b55b3c983ae8df06473ad27333d2fd9f3e2cfdb913b3a5aaa3a8bcf", size = 3402335 },
     { url = "https://files.pythonhosted.org/packages/66/92/7050c372f78e53eba14695cec6c3a91b2d9ca56feaf0bfe95fe90facf730/psycopg_binary-3.2.6-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:0f4699fa5fe1fffb0d6b2d14b31fd8c29b7ea7375f89d5989f002aaf21728b21", size = 3440442 },
     { url = "https://files.pythonhosted.org/packages/5f/4c/bebcaf754189283b2f3d457822a3d9b233d08ff50973d8f1e8d51f4d35ed/psycopg_binary-3.2.6-cp313-cp313-win_amd64.whl", hash = "sha256:afe697b8b0071f497c5d4c0f41df9e038391534f5614f7fb3a8c1ca32d66e860", size = 2783465 },
+]
+
+[[package]]
+name = "python-dotenv"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/88/2c/7bb1416c5620485aa793f2de31d3df393d3686aa8a8506d11e10e13c5baf/python_dotenv-1.1.0.tar.gz", hash = "sha256:41f90bc6f5f177fb41f53e87666db362025010eb28f60a01c9143bfa33a2b2d5", size = 39920 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1e/18/98a99ad95133c6a6e2005fe89faedf294a748bd5dc803008059409ac9b1e/python_dotenv-1.1.0-py3-none-any.whl", hash = "sha256:d7c01d9e2293916c18baf562d95698754b0dbbb5e74d457c45d4f6561fb9d55d", size = 20256 },
 ]
 
 [[package]]

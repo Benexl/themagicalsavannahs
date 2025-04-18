@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Destination, Experience, TourPackage, Booking, Testimonial
+
+from .models import Booking, Destination, Experience, Testimonial, TourPackage
 
 # Register your models here.
 admin.site.register(Destination)

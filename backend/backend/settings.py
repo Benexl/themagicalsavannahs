@@ -10,13 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os  # Import os
 from pathlib import Path
 
 import dj_database_url
+from dotenv import load_dotenv  # Import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Load environment variables from .env file
+load_dotenv(BASE_DIR / ".env")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -79,12 +83,16 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if not DATABASE_URL:
+    raise ValueError("DATABASE_URL environment variable not set")
 
 DATABASES = {
     "default": dj_database_url.parse(
-        "postgresql://themagicalsavannahs_owner:npg_5Zh7KyGdJLPp@ep-gentle-leaf-a4rr7rwn-pooler.us-east-1.aws.neon.tech/themagicalsavannahs?sslmode=require",
+        DATABASE_URL,
         conn_max_age=600,
-        ssl_require=True,
+        ssl_require=True,  # Keep ssl_require=True if your DB needs it
     )
 }
 
