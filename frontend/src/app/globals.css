@@ -76,6 +76,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Added from index.html */
+  --hunter-green: #2c5f2d;
+  --black: #090909; /* Used for overlay */
+  --moonstone: #69a2b0;
+  --white: #f8f9fa; /* Used for bg-custom-white */
+  --pale-dogwood: #eddcd2;
 }
 
 .dark {
@@ -117,6 +124,77 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    /* Use custom white as the default background */
+    @apply bg-custom-white text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  /* Custom utility classes based on CSS variables */
+  .bg-hunter-green {
+    background-color: var(--hunter-green);
+  }
+  .text-hunter-green {
+    color: var(--hunter-green);
+  }
+  .bg-moonstone {
+    background-color: var(--moonstone);
+  }
+  .text-moonstone {
+    color: var(--moonstone);
+  }
+  .bg-custom-white {
+    background-color: var(--white);
+  }
+  .bg-black-overlay {
+    background-color: var(--black);
+  } /* Renamed to avoid conflict with tailwind black */
+  .bg-pale-dogwood {
+    background-color: var(--pale-dogwood);
+  }
+
+  /* Hero Section Background */
+  .hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Consider adjusting based on header height */
+  }
+
+  /* Footer Background */
+  .footer-bg {
+    background-image: linear-gradient(rgba(9, 9, 9, 0.8), rgba(9, 9, 9, 0.8)),
+      url("https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=60");
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Experience Card Hover Effect */
+  .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Desktop Nav Link Underline Effect */
+  .nav-link-desktop {
+    position: relative; /* Needed for the pseudo-element */
+    padding-bottom: 4px; /* Add space for the line */
+  }
+  .nav-link-desktop::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Start with no width */
+    height: 2px; /* Line thickness */
+    background-color: var(--hunter-green); /* Line color */
+    transition: width 0.3s ease; /* Smooth transition */
+  }
+  .nav-link-desktop:hover {
+    color: var(--hunter-green); /* Change text color on hover */
+  }
+  .nav-link-desktop:hover::after {
+    width: 100%; /* Expand line on hover */
   }
 }
