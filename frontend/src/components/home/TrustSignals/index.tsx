@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CreditCard, ShieldCheck } from "lucide-react"; // Using lucide-react
+import { CreditCard } from "lucide-react"; // Using lucide-react
 
 // Placeholder logos - replace with actual paths or components
 const trustLogos = [
@@ -54,7 +54,7 @@ export default function TrustSignals() {
     <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-hunter-green mb-4">
-          You're In Good Hands
+          You&apos;re In Good Hands
         </h2>
       </div>
 

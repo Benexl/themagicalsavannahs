@@ -17,7 +17,7 @@ const EmotionDiscovery = () => {
           How do you want this trip to make you feel?
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Select your vibe and we'll curate the perfect experiences just for you
+          Select your vibe and we&apos;ll curate the perfect experiences just for you
         </p>
       </div>
 

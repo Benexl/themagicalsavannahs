@@ -31,7 +31,7 @@ export function ReviewCard({
           ))}
         </div>
       </div>
-      <p className="text-gray-700 text-sm flex-grow">"{reviewText}"</p>
+      <p className="text-gray-700 text-sm flex-grow">&quot;{reviewText}&quot;</p>
     </div>
   );
 }
