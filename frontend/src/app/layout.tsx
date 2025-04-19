@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar"; // Import the Navbar
+import Footer from "@/components/Footer"; // Import the Footer
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,15 +25,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="flex flex-col min-h-screen">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-custom-white`} // Added bg-custom-white
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-custom-white flex flex-col flex-1`}
       >
-        <Navbar /> {/* Add the Navbar here */}
-        <main className="pt-16"> {/* Add padding-top to offset fixed navbar */}
+        <Navbar />
+        <main className="pt-16 flex-grow"> {/* Add padding-top and flex-grow */}
           {children}
         </main>
-        {/* Add Footer component here later */}
+        <Footer /> {/* Add the Footer component here */}
       </body>
     </html>
   );
