@@ -5,6 +5,7 @@ import TopDestinations from "@/components/home/TopDestinations";
 import StoriesSection from "@/components/home/StoriesSection"; // Import the StoriesSection
 import GroupTravel from "@/components/home/GroupTravel"; // Import the GroupTravel section
 import ReviewsSection from "@/components/home/ReviewsSection"; // Import the ReviewsSection
+import BusinessSection from "@/components/home/BusinessSection"; // Import the BusinessSection
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <StoriesSection /> {/* Add the StoriesSection */}
       <GroupTravel /> {/* Add the GroupTravel section */}
       <ReviewsSection /> {/* Add the ReviewsSection */}
+      <BusinessSection /> {/* Add the BusinessSection */}
       {/* Add other page sections here */}
     </>
   );
