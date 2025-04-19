@@ -28,9 +28,8 @@ const DestinationCard: React.FC<DestinationCardProps> = ({ destination }) => {
         <Image
           src={imageUrl}
           alt={`Image of ${destination.name}`}
-          layout="fill" // Use fill layout
-          objectFit="cover" // Cover the area
-          className="transition-transform duration-300 ease-in-out group-hover:scale-105" // Basic zoom effect on hover (needs group class on parent if Card doesn't work)
+          fill // Use the boolean fill prop
+          className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" // Added object-cover class
         />
       </CardHeader>
       <CardContent className="p-4 flex-grow">

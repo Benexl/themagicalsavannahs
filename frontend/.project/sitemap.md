@@ -26,8 +26,8 @@ This document defines the high‑level pages and navigation hierarchy for The Ma
 ## Experiences
 
 - TravelMatch™ (`/experiences/travelmatch`)
-- Stories (`/experiences/stories`)
-- Story of the Month (`/experiences/month`)
+- Stories (`stories.themagicalsavannahs.com`)
+- Story of the Month (`stories.themagicalsavannahs.com/story-of-the-month`)
 - Tailored Trios (`/experiences/tri`)
 - Stargazing Nights (`/experiences/stargazing`)
 - Hidden Gem Hunts (`/experiences/hidden-gems`)
