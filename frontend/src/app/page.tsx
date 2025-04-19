@@ -3,6 +3,8 @@ import EmotionDiscovery from "@/components/home/EmotionDiscovery"; // Import the
 import FeaturedExperiences from "@/components/home/FeaturedExperiences"; // Import the FeaturedExperiences section
 import TopDestinations from "@/components/home/TopDestinations";
 import StoriesSection from "@/components/home/StoriesSection"; // Import the StoriesSection
+import GroupTravel from "@/components/home/GroupTravel"; // Import the GroupTravel section
+import ReviewsSection from "@/components/home/ReviewsSection"; // Import the ReviewsSection
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <FeaturedExperiences /> {/* Add the FeaturedExperiences section */}
       <TopDestinations /> {/* Add the TopDestinations section */}
       <StoriesSection /> {/* Add the StoriesSection */}
+      <GroupTravel /> {/* Add the GroupTravel section */}
+      <ReviewsSection /> {/* Add the ReviewsSection */}
       {/* Add other page sections here */}
     </>
   );
